@@ -214,4 +214,4 @@ resell it, repackage it under another name, or strip the attribution.
 
 ## Author
 
-m4gester-bitt
+m4gester-bitt on github
