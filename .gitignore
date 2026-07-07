@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.sqlite3
+ghscan_report.md
+ghscan_report.json
+.venv/
