@@ -200,30 +200,6 @@ python3 -m ghscan --org some-org --save --report-json-path findings.json
 - `--log-level {DEBUG,INFO,WARNING,ERROR}`
 - `--json-logs` -- structured JSON log lines instead of plain text
 
-## Running the tests
-
-```bash
-python3 -m unittest discover -s tests -v
-```
-
-## Publishing this to your own GitHub
-
-1. Unzip this archive somewhere and `cd` into it.
-2. Initialize a repo and make the first commit:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   ```
-3. Create an empty repository on GitHub (no README/license/gitignore --
-   this project already has all three), then point your local repo at it:
-   ```bash
-   git remote add origin https://github.com/<your-username>/ghscan.git
-   git branch -M main
-   git push -u origin main
-   ```
-4. Double check `.gitignore` is doing its job -- you don't want
-   `ghscan_cache.sqlite3` or a saved report accidentally committed.
 
 ## License
 
