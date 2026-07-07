@@ -33,7 +33,7 @@ re-querying the API or re-scanning repos it already finished.
 #### Install
 
 ```bash
-git clone https://github.com/<your-username>/ghscan.git
+git clone https://github.com/m4gester-bitt/ghscan.git
 cd ghscan
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
