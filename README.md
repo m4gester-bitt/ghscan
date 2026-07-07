@@ -33,28 +33,27 @@ re-querying the API or re-scanning repos it already finished.
 #### Install
 
 ```bash
+pip install ghscan
+```
+
+Or from source:
+
+```bash
 git clone https://github.com/m4gester-bitt/ghscan.git
 cd ghscan
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Or install it as a proper console command:
-
-```bash
-pip install -e .
-ghscan --org some-org
-```
-
 Either way, make sure you `cd` into the folder you cloned/unzipped
-before running anything below -- the commands assume you're already
-inside it.
+before running anything below if you're on the source install -- the
+commands assume you're already inside it.
 
 ## Quick start
 
 ```bash
 export GITHUB_TOKEN=ghp_yourtokenhere
-python3 -m ghscan --org some-org
+ghscan --org some-org
 ```
 
 That runs with the defaults: skips archived repos and forks, derives
@@ -62,7 +61,7 @@ contributors from commit history, no volume caps. For a first look at a
 big org, it's worth doing a dry run first:
 
 ```bash
-python3 -m ghscan --org some-org --dry-run
+ghscan --org some-org --dry-run
 ```
 
 This runs discovery, builds the scan queue, prints roughly how many
@@ -113,8 +112,8 @@ just prints to your terminal at the end of the run -- nothing is written
 to disk unless you pass `--save`:
 
 ```bash
-python3 -m ghscan --org some-org --save
-python3 -m ghscan --org some-org --save --report-json-path findings.json
+ghscan --org some-org --save
+ghscan --org some-org --save --report-json-path findings.json
 ```
 
 ## All the flags
@@ -200,6 +199,12 @@ python3 -m ghscan --org some-org --save --report-json-path findings.json
 - `--log-level {DEBUG,INFO,WARNING,ERROR}`
 - `--json-logs` -- structured JSON log lines instead of plain text
 
+## Good faith
+
+This scans personal repos belonging to real people, not just the org.
+Use it on orgs and accounts you own or have explicit permission to test.
+Don't run it against people who haven't agreed to it, and don't use
+whatever it finds for anything other than fixing the leak.
 
 ## License
 
