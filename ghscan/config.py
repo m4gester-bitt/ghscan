@@ -35,7 +35,7 @@ class Config:
 
     # threads n stuff
     api_workers: int = 8
-    scan_workers: int = 4
+    scan_workers: int = 5
 
     # trufflehog opts
     trufflehog_path: str = "trufflehog"
