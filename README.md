@@ -19,7 +19,7 @@ footprint and scans it in one pass. Only point it at orgs/repos/accounts
 you own or are explicitly authorized to test -- see `LICENSE.md`.
 
 Everything is cached in a local SQLite file as it goes, so a run can be
-killed (Ctrl-C, a crash, whatever) and picked back up later without
+killed (Ctrl-C, a crash, etc) and picked back up later without
 re-querying the API or re-scanning repos it already finished.
 
 #### Requirements
@@ -212,6 +212,6 @@ See `LICENSE.md`. Short version: free to use and modify for personal,
 educational, and internal/authorized-testing purposes, but you can't
 resell it, repackage it under another name, or strip the attribution.
 
-## Author
+## Maintainer
 
 m4gester-bitt on github
